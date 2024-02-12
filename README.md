@@ -1,1 +1,6 @@
-# ICS3U-1.3-Hello-World
+# ICS3U Your First Fork
+This is GitHub.
+
+## Key Definitions
+### Repo or Repository
+This is a definition.
