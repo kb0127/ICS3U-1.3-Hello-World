@@ -1,5 +1,5 @@
-# ICS3U Your First Fork
-This is a summary of the topics discussed thus far.
+# Summary 
+This is a summary of the topics discussed in lessons 1.1 to 1.3 thus far. When you have received the topics, try some of the challenges at the very bottom of this document.
 
 ## Variables
 A variable is something that stores information in a program so that it can be used later.
@@ -9,9 +9,9 @@ We've looked at several different types of variables in Python:
 
 | Type      | Short Form | Definition                                             | Examples            |
 |-----------|------------|--------------------------------------------------------|---------------------|
-| String    | str        | A sequence of characters, enclosed within quotes       | "hello", 'world'    |
-| Integer   | int        | A whole number without a decimal point                 | 5, 100, -42         |
-| Float     | float      | A number with a decimal point                          | 3.14, -0.5, 2.0     |
+| String    | `str`        | A sequence of characters, enclosed within quotes       | `"hello"`, `'world'`    |
+| Integer   | `int`        | A whole number without a decimal point                 | `5`, `100`, `-42`         |
+| Float     | `float`      | A number with a decimal point                          | `3.14`, `-0.5`, `2.0`     |
 
 ### Variable Assignment Statement
 A variable is created and updated using an **assignment statement**:
@@ -120,4 +120,102 @@ acceleration = 9.8
 #### Bad
 ```
 distance = time * 9.8
+```
+
+## User Input
+Use the `input()` function in Python to retrieve text from a user. Note that all input comes as the `string` data type. You can nuse **type conversion** to change a variable's type for further use.
+
+![diagram02](images/diagram02.png)
+
+## Mathematical Operators
+These are a few of the most common mathetmatical operators seen in Python:
+
+![diagram03](images/diagram03.png)
+
+## String Operators
+These are a few unique cases when using `+` and `*` operators on strings:
+
+![diagram04](images/diagram04.png)
+
+Adding two strings together is called **concatenation** and can only be done with strings. You can use type conversion (e.g. `str(3.14)`)to make sure that all elements are strings before concatenating.
+
+# Practice Problems
+
+## Problem 1
+Create a program `collectdata.py` that asks for the following information and then outputs the information back to the console. Try to follow good variable naming practice from the notes above.
+
+- name
+- age
+- current mark
+- has been assigned a locker
+
+#### Example Run 1
+```
+Enter your name: David
+Enter your age: 16
+Enter your current mark: 92.3
+Have you been assigned a locker (True/False)? True
+
+Name: David
+Age: 16
+Current Mark: 92.3
+Locker Assigned: True
+```
+
+## Problem 2
+Now, modify `collectdata.py` so that it prompts for a first name and last name, but outputs the data as one:
+
+#### Example Run 2
+```
+Enter your first name: David
+Enter your last name: Cheng
+Enter your age: 16
+Enter your current mark: 92.3
+Have you been assigned a locker (True/False)? True
+
+Name: David Cheng
+Age: 16
+Current Mark: 92.3
+Locker Assigned: True
+```
+
+## Problem 3
+Going to a restaurant in a large group can be a complicated experience, particularly when it comes to splitting the bill. 
+
+Write a program `billsplitter.py` that calculates how much each person should pay based on a group meal's total bill after-tax. Ask the user for input (size of group, total bill, desired tip) and output the amount each person should pay.
+
+1. Remember, the after-tax total includes the 13 percent HST. 
+1. The calculated tip should not be based on the after-tax total, but rather, the pre-tax total. In other words, a 15% tip on a total bill of $113.00 should be $15 (15% of $100 pre-tax bill).
+1. Dollar amounts are not integers (whole numbers) so you cannot use int(). They have decimal places. This data type is called a floating point number, or float(). You will need to convert the user's string input to floating point in order to be able to do decimal math with it.
+
+#### Example Runtime
+Here is a working example:
+```
+Restaurant Bill Splitter
+
+How many people in your group? 5
+What was the total bill after tax? 226
+How much do you want to tip (standard is 15%)? 15
+
+Each person should pay $51.20
+```
+Another example:
+```
+Restaurant Bill Splitter
+
+How many people in your group? 3
+What was the total bill after tax? 123.45
+How much do you want to tip (standard is 15%)? 20
+
+Each person should pay $48.43
+```
+One last set of numbers:
+```
+Restaurant Bill Splitter
+
+How many people in your group? 8
+What was the total bill after tax? 345.67
+How much do you want to tip (standard is 15%)? 20
+
+Each person should pay $50.86
 ```
