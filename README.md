@@ -1,5 +1,20 @@
 # Summary 
-This is a summary of the topics discussed in lessons 1.1 to 1.3 thus far. When you have received the topics, try some of the challenges at the very bottom of this document.
+This is a summary of the topics covered in Unit 1: Programming Basics. 
+
+When you have received the topics, try some of the challenges at the very bottom of this document.
+
+## Printing
+The `print()` statement is a function that outputs text to the screen. Some notes on its usage:
+
+- String literals should be enclosed in quotes, e.g. `print("Hello, world!")`
+- Variables can be output, without quotes, e.g. `print(user_name)`
+- Strings can be **concatenated** or combined using a print statement. Both `+` and `,` can be used to concatenate strings, with slight differences:
+    - **Plus** (`+`): The `+` operator only works with strings data types. If you are printing integers or floats using `+`, you must convert these to strings with a function like `str()`. For example:
+        - `print("Hello, " + user_name + "!")`
+        - `print("Total Price: $" + str(total_price))`
+    - **Comma** (`,`): The `,` operator automatically converts non-string arguments to strings before printing, however, it *automatically adds a space* between the elements being printed. For example:
+        - `print("Total Price:", total_price)`
+        - `print("Name:", user_name, "Age:", num_user_age)`
 
 ## Variables
 A variable is something that stores information in a program so that it can be used later.
@@ -138,6 +153,14 @@ These are a few unique cases when using `+` and `*` operators on strings:
 ![diagram04](images/diagram04.png)
 
 Adding two strings together is called **concatenation** and can only be done with strings. You can use type conversion (e.g. `str(3.14)`)to make sure that all elements are strings before concatenating.
+
+## Comments
+Comments are statements in the code that are ignored by the interpreter. There are two types of comments:
+
+### Single-Line Comments
+These comments use the `#` character at the start of, or anywhere in the line. Everything after the `#` is ignored.
+
+
 
 # Practice Problems
 
