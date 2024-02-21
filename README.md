@@ -197,6 +197,7 @@ Adding two strings together is called **concatenation** and can only be done wit
       Date: 2024-02-21
       Description: Converts temperture from Celsius to Fahrenheit.
       """
+      
       # Get Celsius temperature from user
       temp_celsius = float(input("Enter temperature in Celsius: "))
 
