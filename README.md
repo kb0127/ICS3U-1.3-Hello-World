@@ -155,10 +155,72 @@ These are a few unique cases when using `+` and `*` operators on strings:
 Adding two strings together is called **concatenation** and can only be done with strings. You can use type conversion (e.g. `str(3.14)`)to make sure that all elements are strings before concatenating.
 
 ## Comments
-Comments are statements in the code that are ignored by the interpreter. There are two types of comments:
+### Comment Types in Python
 
-### Single-Line Comments
-These comments use the `#` character at the start of, or anywhere in the line. Everything after the `#` is ignored.
+1. **Single-Line Comments**:
+   - **Description**: Single-line comments are brief comments that span only one line. They are preceded by the `#` symbol.
+   - **Usage**: Use single-line comments to provide short explanations, notes, or context for specific lines of code.
+   - **Example**:
+
+     ```python
+     # This is a single-line comment
+     x = 10  # Assigning value to variable x
+     ```
+
+   - **Good Practice**: 
+     - Use single-line comments to clarify complex or non-obvious code.
+     - Place comments above the line they describe for clarity.
+
+   - **Bad Practice**:
+     - Replicating code in comments, which can lead to redundancy and confusion:
+
+       ```python
+       # This function adds two numbers
+       def add(a, b):
+           # Adding two numbers
+           return a + b
+       ```
+
+2. **Multi-Line Comments (Docstrings)**:
+   - **Description**: Multi-line comments, also known as docstrings, are used to document entire functions, modules, or classes. They are enclosed within triple quotes (`'''` or `"""`).
+   - **Usage**: Docstrings provide detailed documentation about the purpose, inputs, outputs, and behavior of functions, classes, or modules.
+   - **Example**:
+
+     ```python
+     '''
+     This function calculates the sum of two numbers.
+     Parameters:
+         a (int): The first number.
+         b (int): The second number.
+     Returns:
+         int: The sum of a and b.
+     '''
+     def add(a, b):
+         return a + b
+     ```
+
+   - **Good Practice**:
+     - Use docstrings to document public functions, methods, classes, and modules.
+     - Follow a consistent docstring format to enhance readability and maintainability.
+
+   - **Bad Practice**:
+     - Not providing sufficient documentation, which can make it challenging for others to understand and use your code:
+
+       ```python
+       def calculate_tax(income):
+           return income * 0.25  # Calculate tax at 25%
+       ```
+
+       In this case, a docstring explaining the tax calculation logic would improve code clarity and usability.
+
+### Best Practices
+- **Clarity Over Comments**: Strive to write clear and understandable code. Use comments only when necessary to explain complex logic or provide additional context.
+- **Consistency**: Follow consistent commenting conventions throughout your codebase to improve readability and maintainability.
+- **Review and Refactor**: Regularly review your codebase to ensure comments are up to date and relevant. Refactor code to eliminate redundant or obsolete comments.
+
+By following these best practices, beginner Python programmers can effectively use comments to enhance the readability and maintainability of their code.
+
+
 
 
 
