@@ -1,4 +1,4 @@
-# Summary 
+# Summary of Unit 1: Programming Basics
 This is a summary of the topics covered in Unit 1: Programming Basics. 
 
 When you have received the topics, try some of the challenges at the very bottom of this document.
@@ -49,7 +49,7 @@ pritn(type(greeting))
 
 In addition, it is good programming practice to be strict about maintaing consistency with your variables and data types. Try to avoid using the same variable for strings and integers at different points in your program.
 
-## Best Practices
+## Best Practices with Variable Naming
 It's important to follow good variable naming conventions and style guidelines (outlined in a document called the [Python Enhancement Proposal 8](https://pep8.org/), or PEP8). This helps us write clean, readable, and maintainable code. 
 
 Here are some good beginner variable rules based on PEP8:
@@ -164,66 +164,60 @@ Adding two strings together is called **concatenation** and can only be done wit
 
      ```python
      # This is a single-line comment
-     x = 10  # Assigning value to variable x
+     x = 10  # This is another comment
      ```
 
    - **Good Practice**: 
      - Use single-line comments to clarify complex or non-obvious code.
-     - Place comments above the line they describe for clarity.
+     - Place comments *above* the line they describe for clarity.
 
-   - **Bad Practice**:
-     - Replicating code in comments, which can lead to redundancy and confusion:
+   - **Try to Avoid**:
+     - Avoid simply replicating code in comments, which can lead to redundancy and confusion:
 
        ```python
-       # This function adds two numbers
-       def add(a, b):
-           # Adding two numbers
-           return a + b
+       num_a = 10  # num_a is 10
+       num_b = 20  # num_b is 20
+       
+       # result is num_a + num_b
+       result = num_a + num_b
+
+       # print result
+       print("Result:", result)
        ```
 
-2. **Multi-Line Comments (Docstrings)**:
-   - **Description**: Multi-line comments, also known as docstrings, are used to document entire functions, modules, or classes. They are enclosed within triple quotes (`'''` or `"""`).
-   - **Usage**: Docstrings provide detailed documentation about the purpose, inputs, outputs, and behavior of functions, classes, or modules.
+2. **Multi-Line Comments**:
+   - **Description**: Multi-line comments, also known as docstrings, are used to document entire programs, functions, modules, or classes. They are enclosed within triple quotes (`'''` or `"""`).
+   - **Usage**: Multi-line comments provide detailed documentation about purpose, usage, inputs, outputs, and behavior of entire programs, functions, modules, etc.
    - **Example**:
 
-     ```python
-     '''
-     This function calculates the sum of two numbers.
-     Parameters:
-         a (int): The first number.
-         b (int): The second number.
-     Returns:
-         int: The sum of a and b.
-     '''
-     def add(a, b):
-         return a + b
-     ```
+      ```python
+      """
+      File: celsius.py
+      Author: Dave Cheng
+      Date: 2024-02-21
+      Description: Converts temperture from Celsius to Fahrenheit.
+      """
+      # Get Celsius temperature from user
+      temp_celsius = float(input("Enter temperature in Celsius: "))
+
+      # Convert Celsius to Fahrenheit
+      temp_fahrenheit = (celsius * 9/5) + 32
+
+      # Output result
+      print("Temperature in Fahrenheit:", temp_fahrenheit)
+      ```
 
    - **Good Practice**:
-     - Use docstrings to document public functions, methods, classes, and modules.
+     - Use a multi-line comment as a program header to describe what a program does.
+     - Use docstrings to document functions, methods, classes, and modules.
      - Follow a consistent docstring format to enhance readability and maintainability.
 
-   - **Bad Practice**:
-     - Not providing sufficient documentation, which can make it challenging for others to understand and use your code:
-
-       ```python
-       def calculate_tax(income):
-           return income * 0.25  # Calculate tax at 25%
-       ```
-
-       In this case, a docstring explaining the tax calculation logic would improve code clarity and usability.
-
-### Best Practices
+### Best Practices with Comments
 - **Clarity Over Comments**: Strive to write clear and understandable code. Use comments only when necessary to explain complex logic or provide additional context.
+- **Avoid Verbosity**: Ensure that you don't have *too many comments*. Code that is too verbose or wordy can take away from readability and clarity.
 - **Consistency**: Follow consistent commenting conventions throughout your codebase to improve readability and maintainability.
-- **Review and Refactor**: Regularly review your codebase to ensure comments are up to date and relevant. Refactor code to eliminate redundant or obsolete comments.
 
-By following these best practices, beginner Python programmers can effectively use comments to enhance the readability and maintainability of their code.
-
-
-
-
-
+<br><br>
 # Practice Problems
 
 ## Problem 1
